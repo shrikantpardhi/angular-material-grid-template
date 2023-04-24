@@ -1,5 +1,8 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
+export interface Section {
+  name: string;
+}
 /**
  * @title Basic grid-list
  */
@@ -8,8 +11,16 @@ import {Component} from '@angular/core';
   styleUrls: ['grid-list-overview-example.css'],
   templateUrl: 'grid-list-overview-example.html',
 })
-export class GridListOverviewExample {}
-
+export class GridListOverviewExample {
+  files: Section[] = [
+    {
+      name: 'test1.txt',
+    },
+    {
+      name: 'test3.pdf',
+    },
+  ];
+}
 
 /**  Copyright 2019 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
