@@ -1,35 +1,40 @@
-<mat-grid-list cols="12" rowHeight="1:1">
-  <mat-grid-tile [rowspan]="2" [colspan]="3">
-    <button mat-stroked-button>Send</button>
-  </mat-grid-tile>
-  <mat-grid-tile [rowspan]="1" [colspan]="2">
-    <span style="padding: 2px">To</span>
-  </mat-grid-tile>
-  <mat-grid-tile [rowspan]="1" [colspan]="7">
-    <input value="test@test.com,test@test.com,test@test.com" />
-  </mat-grid-tile>
-  <mat-grid-tile [rowspan]="1" [colspan]="2">
-    <span style="padding: 3px">CC</span>
-  </mat-grid-tile>
-  <mat-grid-tile [rowspan]="1" [colspan]="7">
-    <input value="test@test.com,test@test.com,test@test.com" />
-  </mat-grid-tile>
-  <mat-grid-tile [rowspan]="10" [colspan]="12" rowHeight="1:3">
-    <div class="internalMatGrid">
-      <mat-grid-list cols="12" rowHeight="1:1">
-        <mat-grid-tile [rowspan]="8" [colspan]="12">
-          <mat-list>
-            <div mat-subheader>Attachments</div>
-            <mat-list-item *ngFor="let file of files">
-              <mat-icon matListItemIcon>attach_file</mat-icon>
-              <div matListItemTitle>{{file.name}}</div>
-            </mat-list-item>
-          </mat-list>
-        </mat-grid-tile>
-      </mat-grid-list>
-    </div>
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="box">
+  <!-- email header -->
+  <mat-grid-list cols="12">
+    <mat-grid-tile [rowspan]="2" [colspan]="2">
+      <button mat-stroked-button>Send</button>
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" [colspan]="2">
+      <div class="button-box">To</div>
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" [colspan]="8">
+      <div class="textfield">test@test.com</div>
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" [colspan]="2">
+      <div class="button-box">CC</div>
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" [colspan]="8">
+      <div class="textfield">test@test.com</div>
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" [colspan]="2"> </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" [colspan]="2">
+      <span style="padding: 3px">Subject</span>
+    </mat-grid-tile>
+    <mat-grid-tile [rowspan]="1" [colspan]="8">
+      <div class="textfield">subject line</div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <hr />
+  <!-- email body -->
+  <mat-grid-list rowHeight="100px" cols="1">
+    <mat-grid-tile>
+      <div>body</div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div>Attachements</div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
 
 <!-- Copyright 2019 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
